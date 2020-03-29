@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Entertainment News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let entertainment of entertainment">
+      <ion-thumbnail item-start>
+        <img [src]="entertainment.urlToImage" alt="">
+      </ion-thumbnail>
+      <h2>{{entertainment.title}}</h2>
+      <p>{{entertainment.description}}</p>
+      <button ion-button clear item-end (click)="goToDetail(entertainment)">
+        view
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
